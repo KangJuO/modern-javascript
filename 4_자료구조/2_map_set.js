@@ -47,3 +47,29 @@ for (let [key, value] of map1.entries()) console.log("entries", key, value);
 map1.forEach((value, key, map) => {
   console.log(value, key, map);
 });
+
+//set은 중복을 허ㅏ용하지 않는 값을 모아놓은 컬렉션(키가 없는 값)
+
+let set1 = new Set();
+let a = { name: "a" };
+let b = { name: "b" };
+let c = { name: "c" };
+
+set1.add(a);
+set1.add(b);
+set1.add(c);
+set1.add(a);
+set1.add(c);
+
+console.log(set1);
+
+//반복작업가능
+for (let value of set1) console.log(value);
+
+set1.forEach((value, valueAgain, set) => {
+  console.log(value, valueAgain, set);
+});
+
+console.log(set1.keys());
+console.log(set1.values());
+console.log(set1.entries());
